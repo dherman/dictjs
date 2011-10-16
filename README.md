@@ -15,6 +15,14 @@ Examples:
     true
     js> "hasOwnProperty" in d
     false
+    js> d.hasOwnProperty = "yo dawg"
+    "yo dawg"
+    js> Dict.size(d)
+    4
+    js> delete d.baz
+    true
+    js> "baz" in d
+    false
     js> d instanceof Dict
     true
     js> d instanceof Object

@@ -52,7 +52,8 @@ var Dict = (function() {
             return hasOwn(this.store, key);
         },
         get: function(receiver, key) {
-            return this.store[key];
+            if (hasOwn(this.store, key))
+                return this.store[key];
         },
         set: function(receiver, key, val) {
             if (!hasOwn(this.store, key))
